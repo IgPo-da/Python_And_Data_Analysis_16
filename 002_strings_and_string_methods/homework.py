@@ -1,7 +1,14 @@
 # Useful links
-# https://www.w3schools.com/python/python_string_formatting.asp
+"""
+# W3 python reference
+https://www.w3schools.com/python/python_reference.asp
+# W3 string formatting table
+https://www.w3schools.com/python/python_string_formatting.asp
+"""
 
 # Tasks
+# Use provided variables to complete a task
+
 
 # Write a code to return "Hero" from given string
 example_string1 = "Hello bro"
