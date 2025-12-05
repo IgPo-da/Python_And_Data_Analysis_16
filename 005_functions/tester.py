@@ -1,134 +1,158 @@
-# a = 0
-# b = 10
-#
-#
-# def sum_two_numbers(a: int, b: int):
-#     print(a + b)
-#
-#
-# sum_two_numbers(10, 23)
-# sum_two_numbers(a, b)
-# sum_two_numbers(b, a)
-# sum_two_numbers('Hello', 'World')
-
-# def say_hello():
-#     print('Hello world!')
-#
-#
-# x = say_hello()
-# print(x)
-# # print(say_hello())
+# def say_hello(name):
+#     print(f"Hello {name}!")
 
 
-# def say_hello(name: str):
-#     print(f'Hello {name}!')
-#
-#
-# names = ['Sarah', 'Jack', 'Bob', 'Mary']
-# for name in names:
-#     say_hello(name)
+# say_hello("Roman")
 
 
-# def area(side_a: float, side_b: float) -> float:
-#     return side_a * side_b
-#
-#
-# def count_total_material(carpet_area: float, qty: int) -> float:
-#     return carpet_area * qty
-#
-#
-# def print_results(order: list):
-#     carpet_area = area(order[0], order[1])
-#     total = count_total_material(carpet_area, order[2])
-#     print(f'Total material needed: {total}cm2')
-#
-#
-# order = [50, 80, 37]  # [width, height, qty]
-#
-# print_results(order)
-# print(area(12, 23))
+# def square(number):
+#     return number**2
 
 
-# def number_sign(num: int) -> str:
-#     if num < 0:
-#         return f'{num} is negative'
-#     elif num > 0:
-#         return f'{num} is positive'
-#     return f'{num} is zero'
-#
-#
-# print(number_sign(0))
+# print(square(5) * 60)
 
-# a, b, c = 10, 20, 30
-#
-#
-# def example():
-#     global a
-#     a = 40
-#     print('func', a, b, c)
-#
-#
-# example()
-# print('global', a, b, c)
-#
-#
-# def asd():
-#     x = 50
-#     return x
-#
-# x = asd()
+# print(1 + 2)
 
-
-# def example(a, b, d, c=0):
-#     return a + b + c + d
-#
-#
-# print(example(123, 123, 2))
-# print(example(c=100, b=23, a=123))
-
-
-# def remove_duplicates_and_sort(iterable: list, desc=None) -> list:
-#     iterable = list(set(iterable))
-#     if desc:
-#         iterable.sort(reverse=True)
+# def biggest_of_two(a, b):
+#     if a > b:
+#         return a
+#     elif b > a:
+#         return b
 #     else:
-#         iterable.sort()
-#     return iterable
-#
-#
-# print(remove_duplicates_and_sort([3, 3, 2, 1, 5, 7, 7, 7, 8, 4, 3, 4, 4, 2], desc=True))
+#         return a
+    
+
+# print(biggest_of_two(7, 5))
+
+# def fizz_buzz(start, end):
+#     for num in range(start, end + 1):
+#         if num % 5 == 0 and num % 3 == 0:
+#             print(num, 'FIZZBUZZ')
+#         elif num % 3 == 0:
+#             print(num, 'FIZZ')
+#         elif num % 5 == 0:
+#             print(num, 'BUZZ')
+
+# fizz_buzz(100, 200)
+
+# def area(a, b):
+#     return a * b
+
+# def perimeter(a, b):
+#     return (a + b) * 2
+
+# def count_materials(order):
+#     total_area = 0
+#     total_perimeter = 0
+#     for carpet in order:
+#         total_area += area(carpet['width'], carpet['height']) * carpet['amount']
+#         total_perimeter += perimeter(carpet['width'], carpet['height']) * carpet['amount']
+#     # return (total_area, total_perimeter)
+#     print(f'Total carpet material: {total_area / 1000}m2\nTotal carpet edge material: {total_perimeter/100}m')
+
+# order = [
+#     {
+#         'width': 80,
+#         'height': 40,
+#         'amount': 32
+#     },
+#     {
+#         'width': 120,
+#         'height': 80,
+#         'amount': 23
+#     },
+#     {
+#         'width': 120,
+#         'height': 120,
+#         'amount': 15
+#     },
+# ]
+
+# count_materials(order)
 
 
-# def print_many(*args, a, b):
-#     print('A', a)
-#     print('B', b)
-#     for item in args:
-#         print(item)
-#
-#
-# print_many(123, 123, 1, 2, 3, 4, 5, a=100, b=200)
-
-# def kwargs_func(**kwargs):
+# def example(b, c, a=0, *args, **kwargs):
+#     print(a, b, c)
+#     print(args)
 #     print(kwargs)
-#
-#
-# kwargs_func(name='Jack', surname='Smith', age=20, salary=2000)
 
 
-# x = [1, 2, 3]
-# y = [0, *x, 4]
-# print(*y)
-# var1, *var2, var3, var4 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-# print(var1)
-# print(var2)
-# print(var3)
+# example(1, 2, 3, 'as', 13, True, None, name='Jack')
 
-# import helpers as hp
-# quadruple = 123
-# print(helpers.quadruple(123))
 
-from helpers import triple as trpl, quadruple as qdpl
-# from helpers import *
+# def test(a, b, c):
+#     print(a, b, c)
 
-print(trpl(123))
-print(qdpl(123))
+# test(c=100, b=200, a=100)
+
+
+# def new_print(*values, sep=' ', end='\n'):
+#     str_list = []
+#     for val in values:
+#         str_list.append(str(val))
+#     print(sep.join(str_list) + end)
+
+# new_print(1, 2, 3, 4, 5, 6, 7)
+
+
+# a, b, c = 1, 2, 3
+
+# def visibility():
+#     a = 10
+#     b = 20
+#     # c = 30
+#     print(a, b, c)
+
+# visibility()
+# print(a, b, c)
+
+
+# x = 10
+
+# def test(id_code):
+#     global x
+#     x = 100
+#     print(x)
+
+
+# test()
+# print(x)
+
+# people = [
+#     ('Mary', 'Smith', 25),
+#     ('Bob', 'Gold', 30),
+#     ('Jack', 'Green', 19),
+#     ('Simon', 'Summers', 30),
+# ]
+
+# for name, surname, age, *rest in people:
+#     print(name, surname, age)
+
+# import utils as u
+
+# print(u.double(12))
+# print(u.triple(5))
+
+# from utils import double as dbl, PI
+# from utils import *
+
+# print(double(123))
+# print(PI)
+while True:
+    user_choice = input('1. Say hello\n' \
+                        '2. Say good bye\n' \
+                        '3. Sleep\n' \
+                        '0. Exit\n'
+                        '--> ')
+
+    if user_choice == '1':
+        print('Hello')
+    elif user_choice == '2':
+        print('Good bye')
+    elif user_choice == '3':
+        print('Sleep')
+    elif user_choice == '0':
+        print('quitting')
+        exit()
+    else:
+        print('Choice is our of range')
