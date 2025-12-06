@@ -65,3 +65,32 @@ def fizzbuzz(start=1, stop=30):
 
 
 fizzbuzz()
+
+WEIGHTS_1 = (1, 2, 3, 4, 5, 6, 7, 8, 9, 1)
+WEIGHTS_2 = (3, 4, 5, 6, 7, 8, 9, 1, 2, 3)
+
+id_code = 37008270150
+id_code = 38702020053
+id_code = 38001085718
+id_code = 47101010033
+
+
+
+def weighted_sum(weights, number):
+    sum_of_weighted = 0
+    for weight, digit in zip(weights, number):
+        sum_of_weighted += weight * int(digit)
+    return sum_of_weighted
+
+def check_estonian_id(personal_id):
+    number = str(personal_id)[:10]
+    control_number = weighted_sum(WEIGHTS_1, number) % 11
+    if control_number == 10:
+        sum_2 = weighted_sum(WEIGHTS_2, number) % 11
+        control_number = sum_2 if sum_2 < 10 else 0
+    return control_number
+
+
+print(f"id control number for ID {id_code} is {check_estonian_id(id_code)}")
+
+

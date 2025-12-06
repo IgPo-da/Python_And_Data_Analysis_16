@@ -21,9 +21,6 @@ print()
 # but not a multiple of 100 OR if it is a multiple of 400.
 years_list = [2012, 2011, 1492, 1861, 1600, 1700, 1800, 1900, 2000]
 
-
-
-
 for year in years_list:
     leap = "NO"
     if not year % 400:
@@ -65,12 +62,13 @@ print()
 # I found a hint on Google, but wrote it myself :)
 # I was surprised that I could use string concatenation for this particular case. 
 # I was going to use another comparison on 3 and 5 at the same time or another 2 comparisons within the checks on 3 and 5
-for i in range(1, 100):
+for i in range(1, 101):
     FB = ''
     if not i % 3:
         FB += "FIZZ"
     if not i % 5:
         FB += "BUZZ"
-    if not FB:
-        FB = i
-    #print(FB)
+    if FB:
+        print(i, FB)
+
+
