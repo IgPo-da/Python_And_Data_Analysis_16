@@ -1,1 +1,2 @@
-print('3' in '12')
+region_id = '002'
+print(region_id >= '001')

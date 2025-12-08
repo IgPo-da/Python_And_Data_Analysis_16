@@ -61,6 +61,14 @@ def validate_id():
         print('Code is invalid')
 
 
+def check_region():
+    region_id = id_code[-4:-1]
+    if region_id >= '001' and region_id <= '010':
+        print('Kuressaare Hospital')
+    elif int(region_id) in range(1, 11):
+        print('Tartu University Women\'s Clinic')
+    
+
 def menu():
     registry = {
         '1': get_gender,
