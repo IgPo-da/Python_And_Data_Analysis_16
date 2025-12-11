@@ -44,6 +44,8 @@ def list_query(endpoint, **params):
             return data.get('data')
         else:
             return {'error': response.status_code}
+        
+pp(list_query('/products', search='phone', searchFields='title'))
 
 
 def item_query(endpoint, id):
