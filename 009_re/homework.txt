@@ -1,17 +1,21 @@
-1. Напишите регулярное выражение для поиска HEX(HTML)-цвета, заданного как #ABCDEF, то есть # и содержит затем 6 шестнадцатеричных символов.
-	HASH цвета используют значения от 0 до 15, где 0-9 цифры от нуля до 9, 10-15 буквы от A-F.
+1. Write a regular expression to find a HEX (HTML) color written as #ABCDEF, i.e., it starts with # and is followed by 6 hexadecimal characters.
+HEX colors use values from 0 to 15, where 0–9 are digits from zero to nine, and 10–15 are letters from A to F.
 
-2. Создать запрос для определения в тексте цифр, за которыми не стоит знак +. (Примеры выражений “2*9-6*5” или (3+5)-9*4)
+2. Create a query to identify digits in a text that are not followed by a plus sign (+).
+Examples of expressions: 2*9-6*5 or (3+5)-9*4.
 
-3. Найти в тексте время. Время имеет формат часы:минуты. И часы, и минуты состоят из двух цифр, пример: 09:00. Напишите регулярное выражение для поиска времени в строке: «Завтрак в 09:00». Учтите, что «37:98» – некорректное время. [00:00 - 23:59] (123:312, 12:123, 123:23, 98:67 не являются временем)
+3. Find time in a text. Time has the format hours:minutes. Both hours and minutes consist of two digits, for example: 09:00.
+Write a regular expression to find time in the string:
+	"Breakfast at 09:00".
+	Note that 37:98 is not a valid time.
+	Valid range: [00:00 - 23:59]
+	(123:312, 12:123, 123:23, 98:67 are not valid times).
 
-4. Написать программу котороая будет выбирать из файла people.txt:
-	1) Все имена и фамилии х 100
-	2) Все адреса х 100
+4. Write a program that selects data from the file people.txt:
 
-5. Написать регулярное выражение для проверки строки, задача определить состоит ли строка из символов a-z, A-Z, 0-9.
+	All first names and last names × 100
+	All addresses × 100
 
-6. Написать регулярное выражение для определения эстонского личного кода (isikukood)
+5. Write a regular expression to validate a string and determine whether it consists only of the characters a-z, A-Z, 0-9.
 
-
-Все строки произвольные.
+6. Write a regular expression to validate an Estonian personal identification code (isikukood).
