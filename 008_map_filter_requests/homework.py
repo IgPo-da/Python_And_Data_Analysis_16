@@ -7,6 +7,9 @@ Create a dictionary where the names are the keys and the scores are the values u
 students = ["Alice", "Bob", "Charlie", "David"]
 scores = [85, 92, 78, 88]
 
+new = dict(zip(students, scores))
+print(new)
+
 '''
 Task:
 You have a list of product prices in dollars. Convert them to euros using a given conversion rate (1 USD = 0.85 EUR).
@@ -15,6 +18,8 @@ Use map() to perform the conversion.
 
 usd_prices = [100, 150, 200, 250, 300]
 conversion_rate = 0.85
+converted = list(map(lambda price: price * conversion_rate, usd_prices))
+print(converted)
 
 '''
 Task:
@@ -22,7 +27,8 @@ You have a list of ages. Use filter() to create a new list containing only the a
 '''
 
 ages = [12, 17, 19, 24, 15, 30, 16, 18]
-
+adults = list(filter(lambda age: age >= 18, ages))
+print(adults)
 
 '''
 Task:
@@ -36,6 +42,8 @@ products = {
     "Headphones": 200
 }
 
+increased = {pr: p * 1.1 for pr, p in products.items()}
+print(increased)
 
 '''
 Task:
@@ -45,3 +53,7 @@ You have a list of numbers.
 '''
 
 numbers = [3, 5, 7, 9, 11]
+squares = [num ** 2 for num in numbers]
+
+greater_than_50 = list(filter(lambda num: num > 50, squares))
+print(greater_than_50)
