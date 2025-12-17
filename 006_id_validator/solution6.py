@@ -14,6 +14,7 @@ pob = """001...010 = Kuressaare haigla
 601...650 = Viljandi haigla
 651...700 = Lõuna-Eesti haigla (Võru), Põlva haigla"""
 
+id_code = ""
 
 def enter_id_code():
     
@@ -121,5 +122,6 @@ def get_rob():
     if place_found == "False":
         print("You are not born in Estonia")
 
-menu()
+if __name__ == "__main__":
+    menu()
 
